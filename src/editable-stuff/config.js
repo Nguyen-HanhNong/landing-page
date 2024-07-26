@@ -41,13 +41,13 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/headshot.jpg"),
   imageSize: 375,
-  messagge:
+  message:
     "My name is Nguyen-Hanh Nong. I’m a 4th year Computer Science student at Carleton University, with an estimation graduation date of April 2026. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering and machine learning. In my free time I like to create music and contribute to open source projects",
   // resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
-// Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
+// Setting up project length will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
 //      i.e: reposLength: 0,
 // If you want to display specfic projects, add the repository names,
 //      i.e ["repository-1", "repo-2"]
