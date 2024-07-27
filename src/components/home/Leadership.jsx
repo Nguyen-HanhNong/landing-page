@@ -22,7 +22,7 @@ const Leadership = ({ heading, message, img, imageSize }) => {
                   <img
                     className="d-block w-100"
                     src={value.img}
-                    alt="First slide"
+                    alt="Nguyen-Hanh Nong"
                     width={imageSize.width}
                     height={imageSize.height}
                   />

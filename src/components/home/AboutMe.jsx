@@ -41,7 +41,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
             <img
               className="border border-secondary rounded-circle"
               src={profilePicUrl}
-              alt="profilepicture"
+              alt="Nguyen-Hanh Nong"
               width={imgSize}
               height={imgSize}
             />

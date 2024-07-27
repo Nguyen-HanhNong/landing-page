@@ -19,7 +19,7 @@
 
 ![Image of Landing Page](public/social-image.png)
 
-This project contains the code for my personal landing page, found at [nnong.dev](https://nnong.dev). The landing page is built using React and styled with Bootstrap. To produce the dynamic social media posts on the page, the backend dynamically pulls the latest information from Instagram and GitHub using the Instagram API and the Github API.
+This project contains the code for my personal landing page, which can be found at [nnong.dev](https://nnong.dev). The landing page is built using React and styled with Bootstrap. To produce the dynamic social media posts on the page, the backend dynamically pulls the latest information from Instagram and GitHub using the Instagram API and the Github API.
 
 ## Getting Started
 

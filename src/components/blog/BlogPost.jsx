@@ -9,7 +9,7 @@ const BlogPost = ({ match }) => {
       {post && (
         <div>
           <h1 className="display-2 text-center">{post.title}</h1>
-          <img className="img-fluid mb-2" src={post.image} alt={post.title} />
+          <img className="img-fluid mb-2" src={post.image} alt={`Nguyen-Hanh Nong`} />
           {post.getBlog()}
         </div>
       )}
