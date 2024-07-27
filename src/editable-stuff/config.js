@@ -41,9 +41,9 @@ const about = {
   heading: "About Me",
   imageLink: require("../editable-stuff/headshot.jpg"),
   imageSize: 375,
-  messagge:
-    "My name is Nguyen-Hanh Nong. I’m a 4th year Computer Science student at Carleton University, with an estimation graduation date of April 2026. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering and machine learning. In my free time I like to create music and contribute to open source projects",
-  // resume: require("../editable-stuff/resume.pdf"),
+  message:
+    "Hi! My name is Nguyen-Hanh Nong and I’m a 4th-year Computer Science student at Carleton University, with an estimated graduation date of April 2026. I'm most passionate about giving back to the community, and my goal is to pursue this passion within software engineering and machine learning. In my free time, I like to create music and contribute to open-source projects.",
+  resume: require("../editable-stuff/sample-resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -119,18 +119,28 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Display Software Engineer Intern',
+      companylogo: require('../assets/img/qualcomm.png'),
+      date: 'May 2024 - August 2024',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Software Developer Intern',
+      companylogo: require('../assets/img/government.png'),
+      date: 'September 2023 - December 2023',
+    },
+        {
+      role: 'Software Developer Intern',
+      companylogo: require('../assets/img/nokia.png'),
+      date: 'May 2023 - August 2023',
+    },
+    {
+      role: 'Teaching Assistant',
+      companylogo: require('../assets/img/carleton-university.png'),
+      date: 'September 2022 - April 2023',
     },
   ]
 }
