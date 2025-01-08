@@ -123,7 +123,12 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
-      role: 'Display Software Engineer Intern',
+      role: 'Software Engineer Intern',
+      companylogo: require('../assets/img/cisco.png'),
+      date: 'January 2025 - April 2025',
+    },
+    {
+      role: 'Software Engineer Intern',
       companylogo: require('../assets/img/qualcomm.png'),
       date: 'May 2024 - August 2024',
     },
@@ -138,7 +143,7 @@ const experiences = {
       date: 'May 2023 - August 2023',
     },
     {
-      role: 'Teaching Assistant',
+      role: 'Computer Science Teaching Assistant',
       companylogo: require('../assets/img/carleton-university.png'),
       date: 'September 2022 - April 2023',
     },
