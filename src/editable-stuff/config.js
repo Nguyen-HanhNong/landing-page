@@ -84,30 +84,30 @@ const leadership = {
 };
 
 // SKILLS SECTION
-const skills = {
-  show: true,
-  heading: "Skills",
-  hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "JavaScript/TypeScript", value: 90 },
-    { name: "SQL", value: 80 },
-    { name: "React", value: 80 },
-    { name: "Data Structures", value: 75 },
-    { name: "C/C++", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 55 },
-  ],
-  softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Teamwork", value: 90 },
-    { name: "Time Management", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
-  ],
-};
+// const skills = {
+//   show: true,
+//   heading: "Skills",
+//   hardSkills: [
+//     { name: "Python", value: 90 },
+//     { name: "JavaScript/TypeScript", value: 90 },
+//     { name: "SQL", value: 80 },
+//     { name: "React", value: 80 },
+//     { name: "Data Structures", value: 75 },
+//     { name: "C/C++", value: 65 },
+//     { name: "HTML/CSS", value: 55 },
+//     { name: "C#", value: 55 },
+//   ],
+//   softSkills: [
+//     { name: "Goal-Oriented", value: 80 },
+//     { name: "Teamwork", value: 90 },
+//     { name: "Time Management", value: 90 },
+//     { name: "Positivity", value: 75 },
+//     { name: "Adaptability", value: 85 },
+//     { name: "Problem Solving", value: 75 },
+//     { name: "Organization", value: 70 },
+//     { name: "Creativity", value: 90 },
+//   ],
+// };
 
 // GET IN TOUCH SECTION
 const getInTouch = {
@@ -122,6 +122,16 @@ const experiences = {
   show: true,
   heading: "Experiences",
   data: [
+    {
+      role: 'Software Engineer Intern',
+      companylogo: require('../assets/img/tesla.jpg'),
+      date: 'September 2025 - December 2025',
+    },
+    {
+      role: 'Software Developer Intern',
+      companylogo: require('../assets/img/aws.png'),
+      date: 'May 2025 - August 2025',
+    },
     {
       role: 'Software Engineer Intern',
       companylogo: require('../assets/img/cisco.png'),
@@ -155,4 +165,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, leadership, getInTouch, experiences };

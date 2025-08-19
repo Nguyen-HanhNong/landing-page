@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.fe927caf.css",
-    "main.js": "/static/js/main.491ada5f.js",
+    "main.js": "/static/js/main.be9cde2c.js",
     "static/js/787.6606bfd5.chunk.js": "/static/js/787.6606bfd5.chunk.js",
-    "static/media/sample-resume.pdf": "/static/media/sample-resume.af17320786c3597d6953.pdf",
+    "static/media/sample-resume.pdf": "/static/media/sample-resume.8cddd1540655d35c8359.pdf",
     "static/media/headshot.jpg": "/static/media/headshot.6f1503cf50d01afe8ef9.jpg",
     "static/media/nokia.png": "/static/media/nokia.16d54a819b55b98f3847.png",
     "static/media/carleton-university.png": "/static/media/carleton-university.5b8f1133d2d82660042e.png",
     "static/media/government.png": "/static/media/government.d5ce726c3ca657e565ea.png",
+    "static/media/aws.png": "/static/media/aws.7322b6e4bff581d35533.png",
     "static/media/qualcomm.png": "/static/media/qualcomm.1d908dc3974e41d8c267.png",
     "index.html": "/index.html",
     "main.fe927caf.css.map": "/static/css/main.fe927caf.css.map",
-    "main.491ada5f.js.map": "/static/js/main.491ada5f.js.map",
+    "main.be9cde2c.js.map": "/static/js/main.be9cde2c.js.map",
     "787.6606bfd5.chunk.js.map": "/static/js/787.6606bfd5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe927caf.css",
-    "static/js/main.491ada5f.js"
+    "static/js/main.be9cde2c.js"
   ]
 }
