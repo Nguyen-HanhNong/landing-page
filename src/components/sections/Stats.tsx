@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Briefcase, Building2, Code2, GraduationCap } from "lucide-react";
+import { Briefcase, Building2, Code2 } from "lucide-react";
 import { stats } from "../../editable-stuff/config";
 
 const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
   Briefcase,
   Building2,
   Code2,
-  GraduationCap,
 };
 
 export function Stats() {
@@ -15,7 +14,7 @@ export function Stats() {
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {stats.data.map((stat, index) => {
             const IconComponent = iconComponents[stat.icon];
             return (

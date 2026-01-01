@@ -126,7 +126,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/50 text-white hover:bg-white/10 font-semibold px-8"
+              className="border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Get In Touch

@@ -127,7 +127,7 @@ export const mainBody: MainBodyConfig = {
   firstName: "Nguyen-Hanh",
   middleName: "",
   lastName: "Nong",
-  message: "Building impactful software at the intersection of engineering and machine learning",
+  message: "Not just another software engineer",
   icons: [
     {
       image: "fa-github",
@@ -145,12 +145,12 @@ export const stats: StatsConfig = {
   show: true,
   data: [
     {
-      value: "6+",
+      value: "5+",
       label: "Internships",
       icon: "Briefcase",
     },
     {
-      value: "7",
+      value: "6",
       label: "Companies",
       icon: "Building2",
     },
@@ -158,11 +158,6 @@ export const stats: StatsConfig = {
       value: "50+",
       label: "Projects",
       icon: "Code2",
-    },
-    {
-      value: "2026",
-      label: "Graduation",
-      icon: "GraduationCap",
     },
   ],
 };
@@ -281,15 +276,6 @@ export const experiences: ExperiencesConfig = {
         "Contributed to telecommunications software, focusing on 5G network infrastructure and optimization.",
       technologies: ["Python", "C++", "Linux", "5G"],
     },
-    {
-      role: "Computer Science Teaching Assistant",
-      company: "Carleton University",
-      companylogo: require("../assets/img/carleton-university.png"),
-      date: "September 2022 - April 2023",
-      description:
-        "Assisted students in understanding core CS concepts, held office hours, and graded assignments for introductory programming courses.",
-      technologies: ["Python", "Java", "Teaching", "Mentoring"],
-    },
   ],
 };
 
@@ -327,43 +313,43 @@ export const featuredProjects: FeaturedProjectsConfig = {
 };
 
 // PROJECTS SECTION (GitHub repos)
-export const repos: ReposConfig = {
-  show: true,
-  heading: "Recent Projects",
-  gitHubUsername: "Nguyen-HanhNong",
-  reposLength: 4,
-  specificRepos: [],
-};
+// export const repos: ReposConfig = {
+//   show: true,
+//   heading: "Recent Projects",
+//   gitHubUsername: "Nguyen-HanhNong",
+//   reposLength: 4,
+//   specificRepos: [],
+// };
 
 // Leadership SECTION
-export const leadership: LeadershipConfig = {
-  show: false,
-  heading: "Leadership",
-  message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  images: [
-    {
-      img: require("../editable-stuff/headshot.jpg"),
-      label: "First slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-    {
-      img: require("../editable-stuff/headshot.jpg"),
-      label: "Second slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-  ],
-  imageSize: {
-    width: "615",
-    height: "450",
-  },
-};
+// export const leadership: LeadershipConfig = {
+//   show: false,
+//   heading: "Leadership",
+//   message:
+//     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   images: [
+//     {
+//       img: require("../editable-stuff/headshot.jpg"),
+//       label: "First slide label",
+//       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+//     },
+//     {
+//       img: require("../editable-stuff/headshot.jpg"),
+//       label: "Second slide label",
+//       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+//     },
+//   ],
+//   imageSize: {
+//     width: "615",
+//     height: "450",
+//   },
+// };
 
 // GET IN TOUCH SECTION
 export const getInTouch: GetInTouchConfig = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for Software Engineering or Machine Learning internship opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+    "I'm currently looking for Software Engineering (< 2 YOE) opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
   email: "nongnguyenhanh@gmail.com",
 };

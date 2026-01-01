@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "../ui/button";
 import { navBar, mainBody } from "../../editable-stuff/config";
 
 const navLinks = [
@@ -81,13 +80,6 @@ export function Navbar() {
                   {link.name}
                 </motion.button>
               ))}
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                onClick={() => scrollToSection("#contact")}
-              >
-                Hire Me
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -135,12 +127,6 @@ export function Navbar() {
                       {link.name}
                     </button>
                   ))}
-                  <Button
-                    className="mt-4 bg-gradient-to-r from-blue-600 to-purple-600"
-                    onClick={() => scrollToSection("#contact")}
-                  >
-                    Hire Me
-                  </Button>
                 </div>
               </div>
             </motion.div>
