@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Star animation background */
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1163px 1408px #FFF, 458px 625px #FFF, 757px 1012px #FFF,
+    1567px 849px #FFF, 943px 1912px #FFF, 1788px 1649px #FFF, 392px 1102px #FFF,
+    1832px 534px #FFF, 129px 1743px #FFF, 1981px 298px #FFF, 672px 1567px #FFF,
+    1456px 743px #FFF, 234px 1890px #FFF, 1678px 456px #FFF, 567px 1234px #FFF,
+    1890px 678px #FFF, 345px 1567px #FFF, 1234px 890px #FFF, 678px 1456px #FFF,
+    1567px 234px #FFF, 890px 1678px #FFF, 456px 1890px #FFF, 1678px 567px #FFF,
+    234px 1234px #FFF, 1890px 890px #FFF, 567px 678px #FFF, 1234px 1567px #FFF,
+    678px 234px #FFF, 1456px 1890px #FFF, 890px 456px #FFF, 1678px 1234px #FFF,
+    234px 678px #FFF, 1890px 1456px #FFF, 456px 890px #FFF, 1567px 1678px #FFF,
+    678px 1890px #FFF, 1234px 234px #FFF, 890px 1234px #FFF, 1456px 567px #FFF,
+    1678px 890px #FFF;
+  animation: star-move 50s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1163px 1408px #FFF, 458px 625px #FFF, 757px 1012px #FFF,
+    1567px 849px #FFF, 943px 1912px #FFF, 1788px 1649px #FFF, 392px 1102px #FFF,
+    1832px 534px #FFF, 129px 1743px #FFF, 1981px 298px #FFF, 672px 1567px #FFF,
+    1456px 743px #FFF, 234px 1890px #FFF, 1678px 456px #FFF, 567px 1234px #FFF,
+    1890px 678px #FFF, 345px 1567px #FFF, 1234px 890px #FFF, 678px 1456px #FFF,
+    1567px 234px #FFF, 890px 1678px #FFF, 456px 1890px #FFF, 1678px 567px #FFF,
+    234px 1234px #FFF, 1890px 890px #FFF, 567px 678px #FFF, 1234px 1567px #FFF,
+    678px 234px #FFF, 1456px 1890px #FFF, 890px 456px #FFF, 1678px 1234px #FFF,
+    234px 678px #FFF, 1890px 1456px #FFF, 456px 890px #FFF, 1567px 1678px #FFF,
+    678px 1890px #FFF, 1234px 234px #FFF, 890px 1234px #FFF, 1456px 567px #FFF,
+    1678px 890px #FFF;
+}
+
+@keyframes star-move {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
