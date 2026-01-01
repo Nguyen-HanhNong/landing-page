@@ -35,19 +35,21 @@ export function useScrollPosition(
   wait: number | null = null
 ) {
   const position = useRef<ScrollPosition>(getScrollPosition({ useWindow }));
-  let throttleTimeout: ReturnType<typeof setTimeout> | null = null;
-
-  const callBack = () => {
-    const currPos = getScrollPosition({ element, useWindow });
-    effect({ prevPos: position.current, currPos });
-    position.current = currPos;
-    throttleTimeout = null;
-  };
 
   useIsomorphicLayoutEffect(() => {
     if (!isBrowser) {
       return;
     }
+
+    // Declare throttleTimeout inside the effect to ensure fresh reference for each render cycle
+    let throttleTimeout: ReturnType<typeof setTimeout> | null = null;
+
+    const callBack = () => {
+      const currPos = getScrollPosition({ element, useWindow });
+      effect({ prevPos: position.current, currPos });
+      position.current = currPos;
+      throttleTimeout = null;
+    };
 
     const handleScroll = () => {
       if (wait) {
