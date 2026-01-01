@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 
 import {
   Col,
 } from "react-bootstrap";
+import type { Experience } from "../../editable-stuff/config";
 
-const ExperienceCard = ({ data }) => {
+type ExperienceCardProps = {
+  data: Experience;
+};
+
+const ExperienceCard = ({ data }: ExperienceCardProps) => {
   return (
     <Col lg="6">
       <div className="pb-5 text-center">

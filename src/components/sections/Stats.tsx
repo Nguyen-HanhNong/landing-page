@@ -12,7 +12,7 @@ export function Stats() {
   if (!stats.show) return null;
 
   return (
-    <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800">
+    <section id="stats" className="py-16 bg-gradient-to-r from-slate-900 to-slate-800">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {stats.data.map((stat, index) => {

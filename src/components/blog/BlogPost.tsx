@@ -1,8 +1,16 @@
-import React from "react";
 import bloglist from "../../editable-stuff/blog";
-const BlogPost = ({ match }) => {
-  const { id } = match.params;
-  const post = bloglist[id];
+
+type BlogPostProps = {
+  match?: {
+    params?: {
+      id?: string;
+    };
+  };
+};
+
+const BlogPost = ({ match }: BlogPostProps) => {
+  const id = match?.params?.id;
+  const post = typeof id === "string" ? bloglist[Number(id)] : undefined;
 
   return (
     <div className="container-lg mt-5">

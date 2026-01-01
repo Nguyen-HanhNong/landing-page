@@ -1,5 +1,4 @@
 import React from "react";
-
 import axios from "axios";
 import { Jumbotron } from "./migration";
 
@@ -7,7 +6,15 @@ const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
 );
 
-const AboutMe = ({ heading, message, link, imgSize, resume }) => {
+type AboutMeProps = {
+  heading: string;
+  message: string;
+  link?: string;
+  imgSize: number;
+  resume?: string;
+};
+
+const AboutMe = ({ heading, message, link, imgSize, resume }: AboutMeProps) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
   // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
@@ -20,14 +27,18 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
         setProfilePicUrl(response.data.graphql.user.profile_pic_url_hd);
       } catch (error) {
         setShowPic(false);
-        console.error(error.message);
+        if (error instanceof Error) {
+          console.error(error.message);
+        }
       }
     };
 
     if (link && !pictureLinkRegex.test(link)) {
       handleRequest();
-    } else {
+    } else if (link) {
       setProfilePicUrl(link);
+    } else {
+      setShowPic(false);
     }
   }, [link]);
 

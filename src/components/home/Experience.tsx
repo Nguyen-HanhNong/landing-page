@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 import ExperienceCard from "./ExperienceCard";
-import { Jumbotron } from './migration';
+import { Jumbotron } from "./migration";
 import {
   Container,
   Row,
 } from "react-bootstrap";
+import type { ExperiencesConfig } from "../../editable-stuff/config";
 
-const Experience = ({ experiences }) => {
+type ExperienceProps = {
+  experiences: ExperiencesConfig;
+};
+
+const Experience = ({ experiences }: ExperienceProps) => {
   return (
     <section className="section">
       <Container>

@@ -2,8 +2,16 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Typist from 'react-typist-component';
 import { Jumbotron } from "./migration";
+import type { SocialIcon } from "../../editable-stuff/config";
 
-const MainBody = React.forwardRef(
+type MainBodyProps = {
+  gradient: string;
+  title: string;
+  message: string;
+  icons: SocialIcon[];
+};
+
+const MainBody = React.forwardRef<HTMLHeadingElement, MainBodyProps>(
   ({ gradient, title, message, icons }, ref) => {
     return (
       <Jumbotron

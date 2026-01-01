@@ -1,13 +1,25 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useRef } from "react";
+import { useRef, type DependencyList, type RefObject } from "react";
 import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 
-const isBrowser = typeof window !== `undefined`;
+type ScrollPosition = { x: number; y: number };
+type ScrollEffect = (positions: {
+  prevPos: ScrollPosition;
+  currPos: ScrollPosition;
+}) => void;
 
-function getScrollPosition({ element, useWindow }) {
+const isBrowser = typeof window !== "undefined";
+
+function getScrollPosition({
+  element,
+  useWindow,
+}: {
+  element?: RefObject<HTMLElement> | false;
+  useWindow?: boolean;
+}): ScrollPosition {
   if (!isBrowser) return { x: 0, y: 0 };
 
-  const target = element ? element.current : document.body;
+  const target = element && element.current ? element.current : document.body;
   const position = target.getBoundingClientRect();
 
   return useWindow
@@ -15,10 +27,15 @@ function getScrollPosition({ element, useWindow }) {
     : { x: position.left, y: position.top };
 }
 
-export function useScrollPosition(effect, deps, element, useWindow, wait) {
-  const position = useRef(getScrollPosition({ useWindow }));
-
-  let throttleTimeout = null;
+export function useScrollPosition(
+  effect: ScrollEffect,
+  deps: DependencyList = [],
+  element: RefObject<HTMLElement> | false = false,
+  useWindow = false,
+  wait: number | null = null
+) {
+  const position = useRef<ScrollPosition>(getScrollPosition({ useWindow }));
+  let throttleTimeout: ReturnType<typeof setTimeout> | null = null;
 
   const callBack = () => {
     const currPos = getScrollPosition({ element, useWindow });
@@ -46,14 +63,9 @@ export function useScrollPosition(effect, deps, element, useWindow, wait) {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      throttleTimeout && clearTimeout(throttleTimeout);
+      if (throttleTimeout) {
+        clearTimeout(throttleTimeout);
+      }
     };
   }, deps);
 }
-
-useScrollPosition.defaultProps = {
-  deps: [],
-  element: false,
-  useWindow: false,
-  wait: null,
-};

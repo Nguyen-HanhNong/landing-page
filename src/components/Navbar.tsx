@@ -3,20 +3,23 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 import useResizeObserver from "../hooks/useResizeObserver";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { mainBody, repos, about } from "../editable-stuff/config.js";
+import { mainBody, repos, about } from "../editable-stuff/config";
 import { NavLink } from "./home/migration";
 
-const Navigation = React.forwardRef((props, ref) => {
+const Navigation = React.forwardRef<HTMLElement>((_props, ref) => {
   // const { showBlog, FirstName } = config;
   const [isTop, setIsTop] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const navbarMenuRef = React.useRef();
+  const navbarMenuRef = React.useRef<HTMLDivElement | null>(null);
   const navbarDimensions = useResizeObserver(navbarMenuRef);
-  const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
+  const navBottom = navbarDimensions?.bottom ?? 0;
+  const refElement =
+    typeof ref === "object" ? ref?.current ?? null : null;
+
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      if (!navbarDimensions) return;
-      currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
+      if (!navbarDimensions || !refElement) return;
+      currPos.y + refElement.offsetTop - navbarDimensions.bottom > 5
         ? setIsTop(true)
         : setIsTop(false);
       setScrollPosition(currPos.y);
@@ -25,17 +28,16 @@ const Navigation = React.forwardRef((props, ref) => {
   );
 
   React.useEffect(() => {
-    if (!navbarDimensions) return;
-    navBottom - scrollPosition >= ref.current.offsetTop
+    if (!navbarDimensions || !refElement) return;
+    navBottom - scrollPosition >= refElement.offsetTop
       ? setIsTop(false)
       : setIsTop(true);
-  }, [navBottom, navbarDimensions, ref, scrollPosition]);
+  }, [navBottom, navbarDimensions, refElement, scrollPosition]);
 
   return (
     <Navbar
       ref={navbarMenuRef}
-      className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"
-        }`}
+      className={`px-3 fixed-top  ${!isTop ? "navbar-white" : "navbar-transparent"}`}
       expand="lg"
     >
       <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>

@@ -1,15 +1,24 @@
-import React, { Fragment } from "react";
+import { Fragment, type ReactNode } from "react";
+
+type BlogBuilderParams = {
+  title: string;
+  image?: string;
+  description: string;
+};
 
 class BlogBuilder {
-  list = [];
+  list: ReactNode[] = [];
+  title: string;
+  image?: string;
+  description: string;
 
-  constructor({ title, image, description }) {
+  constructor({ title, image, description }: BlogBuilderParams) {
     this.title = title;
     this.image = image;
     this.description = description;
   }
 
-  addParagraph = (props) => {
+  addParagraph = (props: ReactNode) => {
     this.list.push(
       <p key={this.list.length} className="lead">
         {props}
@@ -18,7 +27,7 @@ class BlogBuilder {
     return this;
   };
 
-  addHeading = (props) => {
+  addHeading = (props: ReactNode) => {
     this.list.push(
       <Fragment key={this.list.length}>
         <h1 className="">{props}</h1>

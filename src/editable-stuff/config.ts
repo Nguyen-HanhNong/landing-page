@@ -274,7 +274,7 @@ export const experiences: ExperiencesConfig = {
       date: "May 2023 - August 2023",
       description:
         "Contributed to telecommunications software, focusing on 5G network infrastructure and optimization.",
-      technologies: ["Python", "C++", "Linux", "5G"],
+      technologies: ["Python", "C++", "TCL", "Linux"],
     },
   ],
 };
@@ -285,28 +285,27 @@ export const featuredProjects: FeaturedProjectsConfig = {
   heading: "Featured Projects",
   projects: [
     {
-      name: "AI Code Assistant",
+      name: "Carleton Computer Science Question Repository",
       description:
-        "An intelligent code completion and suggestion tool powered by machine learning, helping developers write better code faster.",
-      technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-      github: "https://github.com/Nguyen-HanhNong",
+        "A website that hosts a collection of practice questions and answers for Carleton University's Computer Science courses. ",
+      technologies: ["TypeScript", "Python", "Astro", "SCSS"],
+      github: "https://github.com/CarletonComputerScienceSociety/questions",
       featured: true,
     },
     {
-      name: "Distributed Task Scheduler",
+      name: "Counter-Strike Hacker Analyzer",
       description:
-        "A scalable task scheduling system designed for cloud environments, handling millions of jobs with fault tolerance.",
-      technologies: ["Go", "Kubernetes", "Redis", "gRPC"],
-      github: "https://github.com/Nguyen-HanhNong",
+        "A CLI tool that analyzes Counter-Strike 2 match data to identify hackers and provide insights into their performance.",
+      technologies: ["Python", "Go", "NumPy", "Pandas", "Scikit-learn", "Tensorflow", "SQLite"],
+      github: "https://github.com/Nguyen-HanhNong/cs2-golang-hacker-analyzer",
       featured: true,
     },
     {
-      name: "Real-time Collaboration Platform",
+      name: "RL Satellite Routing Simulator",
       description:
-        "A collaborative workspace enabling real-time document editing and team communication with WebSocket technology.",
-      technologies: ["TypeScript", "Next.js", "Socket.io", "PostgreSQL"],
-      github: "https://github.com/Nguyen-HanhNong",
-      demo: "https://example.com",
+        "A simulator that models the routing of satellites in the RL Satellite Network using reinforcement learning.",
+      technologies: ["PyQt5", "Python", "NumPy", "Pandas", "Scikit-learn", "Tensorflow", "SQLite"],
+      github: "https://github.com/Nguyen-HanhNong/Reinforcement-Learning-Satellite-Routing-Simulator",
       featured: true,
     },
   ],

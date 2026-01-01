@@ -4,7 +4,20 @@ import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
-const ProjectCard = ({ value }) => {
+type ProjectValue = {
+  name: string | null;
+  description: string | null;
+  svn_url: string | null;
+  stargazers_count: number | null;
+  languages_url: string | null;
+  pushed_at: string | null;
+};
+
+type ProjectCardProps = {
+  value: ProjectValue;
+};
+
+const ProjectCard = ({ value }: ProjectCardProps) => {
   const {
     name,
     description,
@@ -21,7 +34,7 @@ const ProjectCard = ({ value }) => {
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
-          {languages_url ? (
+          {languages_url && svn_url ? (
             <Language languages_url={languages_url} repo_url={svn_url} />
           ) : (
             <Skeleton count={3} />
@@ -37,7 +50,11 @@ const ProjectCard = ({ value }) => {
   );
 };
 
-const CardButtons = ({ svn_url }) => {
+type CardButtonsProps = {
+  svn_url: string;
+};
+
+const CardButtons = ({ svn_url }: CardButtonsProps) => {
   return (
     <div className="d-grid gap-2 d-md-block">
       <a
@@ -53,15 +70,22 @@ const CardButtons = ({ svn_url }) => {
   );
 };
 
-const Language = ({ languages_url, repo_url }) => {
-  const [data, setData] = useState([]);
+type LanguageProps = {
+  languages_url: string;
+  repo_url: string;
+};
+
+const Language = ({ languages_url, repo_url }: LanguageProps) => {
+  const [data, setData] = useState<Record<string, number>>({});
 
   const handleRequest = useCallback(async () => {
     try {
       const response = await axios.get(languages_url);
       return setData(response.data);
     } catch (error) {
-      console.error(error.message);
+      if (error instanceof Error) {
+        console.error(error.message);
+      }
     }
   }, [languages_url]);
 
@@ -69,9 +93,9 @@ const Language = ({ languages_url, repo_url }) => {
     handleRequest();
   }, [handleRequest]);
 
-  const array = [];
+  const array: string[] = [];
   let total_count = 0;
-  for (let index in data) {
+  for (const index in data) {
     array.push(index);
     total_count += data[index];
   }
@@ -100,10 +124,20 @@ const Language = ({ languages_url, repo_url }) => {
   );
 };
 
-const CardFooter = ({ star_count, repo_url, pushed_at }) => {
+type CardFooterProps = {
+  star_count: number | null;
+  repo_url: string | null;
+  pushed_at: string | null;
+};
+
+const CardFooter = ({ star_count, repo_url, pushed_at }: CardFooterProps) => {
   const [updated_at, setUpdated_at] = useState("0 mints");
 
   const handleUpdatetime = useCallback(() => {
+    if (!pushed_at) {
+      setUpdated_at("unknown");
+      return;
+    }
     const date = new Date(pushed_at);
     const nowdate = new Date();
     const diff = nowdate.getTime() - date.getTime();
@@ -114,7 +148,11 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
       let measurement = hours === 1 ? "hour" : "hours";
       return setUpdated_at(`${hours.toString()} ${measurement} ago`);
     } else {
-      const options = { day: "numeric", month: "long", year: "numeric" };
+      const options: Intl.DateTimeFormatOptions = {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      };
       const time = new Intl.DateTimeFormat("en-US", options).format(date);
       return setUpdated_at(`on ${time}`);
     }
@@ -127,13 +165,13 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
   return (
     <p className="card-text">
       <a
-        href={repo_url + "/stargazers"}
+        href={`${repo_url ?? ""}/stargazers`}
         target=" _blank"
         className="text-dark text-decoration-none"
       >
         <span className="text-dark card-link mr-4">
           <i className="fab fa-github" /> Stars{" "}
-          <span className="badge badge-dark">{star_count}</span>
+          <span className="badge badge-dark">{star_count ?? 0}</span>
         </span>
       </a>
       <small className="text-muted">Updated {updated_at}</small>

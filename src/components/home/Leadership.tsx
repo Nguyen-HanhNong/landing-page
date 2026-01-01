@@ -1,8 +1,19 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Jumbotron } from "./migration";
+import type { LeadershipImage } from "../../editable-stuff/config";
 
-const Leadership = ({ heading, message, img, imageSize }) => {
+type LeadershipProps = {
+  heading: string;
+  message: string;
+  img: LeadershipImage[];
+  imageSize: {
+    width: string;
+    height: string;
+  };
+};
+
+const Leadership = ({ heading, message, img, imageSize }: LeadershipProps) => {
   return (
     <Jumbotron
       id="leadership"

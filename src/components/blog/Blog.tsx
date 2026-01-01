@@ -1,8 +1,15 @@
-import React from "react";
 import { BlogBuilder } from "./BlogBuilder";
 import bloglist from "../../editable-stuff/blog";
 import { Link } from "react-router-dom";
-const Blog = (props) => {
+
+type BlogCardProps = {
+  index: number;
+  title: string;
+  description: string;
+  image?: string;
+};
+
+const Blog = () => {
   return (
     <div className="container-lg mt-5 bg-blue">
       <h1 className="text-center">Blogs</h1>
@@ -20,7 +27,7 @@ const Blog = (props) => {
   );
 };
 
-const BlogCard = ({ index, title, image, description }) => {
+const BlogCard = ({ index, title, description }: BlogCardProps) => {
   return (
     <div className="m-5">
       <div className="">
