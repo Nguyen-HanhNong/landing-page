@@ -4,7 +4,6 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Github API](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Nguyen-HanhNong/landing-page?color=ffcc66&style=for-the-badge)
@@ -18,7 +17,7 @@
 
 ![Image of Landing Page](public/social-image.png)
 
-This project contains the code for my personal landing page, which can be found at [nnong.dev](https://nnong.dev). The landing page is built using React and styled with Bootstrap. To produce the dynamic social media posts on the page, the backend dynamically pulls the latest information from Instagram and GitHub using the Instagram API and the Github API.
+This project contains the code for my personal landing page, which can be found at [nnong.dev](https://nnong.dev). The landing page is built using React and styled with Tailwind CSS.
 
 ## Getting Started
 
