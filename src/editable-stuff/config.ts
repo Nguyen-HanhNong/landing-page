@@ -155,7 +155,7 @@ export const stats: StatsConfig = {
       icon: "Building2",
     },
     {
-      value: "50+",
+      value: "5+",
       label: "Projects",
       icon: "Code2",
     },
@@ -188,7 +188,6 @@ export const skills: SkillsConfig = {
         { name: "C/C++", icon: "⚡" },
         { name: "SQL", icon: "🗃️" },
         { name: "Go", icon: "🐹" },
-        { name: "C#", icon: "🎮" },
       ],
     },
     {
@@ -208,10 +207,11 @@ export const skills: SkillsConfig = {
       skills: [
         { name: "AWS", icon: "☁️" },
         { name: "Docker", icon: "🐳" },
-        { name: "Kubernetes", icon: "☸️" },
+        { name: "Electron", icon: "☸️" },
         { name: "Git", icon: "📦" },
         { name: "Linux", icon: "🐧" },
         { name: "CI/CD", icon: "🔄" },
+        { name: "K9s", icon: "🚀" },
       ],
     },
   ],
@@ -227,8 +227,7 @@ export const experiences: ExperiencesConfig = {
       company: "Tesla",
       companylogo: require("../assets/img/tesla.jpg"),
       date: "September 2025 - December 2025",
-      description:
-        "Building next-generation software solutions for Tesla's engineering teams, focusing on automation and efficiency improvements.",
+      description: "Built data visualization systems and backend services on the Cell Software team, focusing on analytics, APIs, and manufacturing insights.",
       technologies: ["Python", "C++", "AWS", "Docker"],
     },
     {
@@ -236,8 +235,7 @@ export const experiences: ExperiencesConfig = {
       company: "Amazon Web Services",
       companylogo: require("../assets/img/aws.png"),
       date: "May 2025 - August 2025",
-      description:
-        "Developing cloud-native applications and services that power AWS infrastructure, working with distributed systems at scale.",
+      description: "Developed partner registration systems and tooling on the AWS Marketplace & Partner Central team.",
       technologies: ["Java", "AWS", "Kubernetes", "TypeScript"],
     },
     {
@@ -245,8 +243,7 @@ export const experiences: ExperiencesConfig = {
       company: "Cisco",
       companylogo: require("../assets/img/cisco.png"),
       date: "January 2025 - April 2025",
-      description:
-        "Contributing to networking software and security solutions, optimizing performance for enterprise-grade systems.",
+      description: "Built reliability and performance tooling for IOS-XE telemetry and developer workflows.",
       technologies: ["C++", "Python", "Linux", "Networking"],
     },
     {
@@ -254,8 +251,7 @@ export const experiences: ExperiencesConfig = {
       company: "Qualcomm",
       companylogo: require("../assets/img/qualcomm.png"),
       date: "May 2024 - August 2024",
-      description:
-        "Worked on embedded systems and mobile platform development, improving performance and power efficiency.",
+      description: "Developed display color-calibration software on the Display Systems team (React, Electron).",
       technologies: ["C", "C++", "Python", "Embedded Systems"],
     },
     {
@@ -263,8 +259,7 @@ export const experiences: ExperiencesConfig = {
       company: "Government of Canada",
       companylogo: require("../assets/img/government.png"),
       date: "September 2023 - December 2023",
-      description:
-        "Developed internal tools and applications to improve government services and citizen engagement.",
+      description: "Developed front-end features for internal services (TypeScript, SQL).",
       technologies: ["React", "Node.js", "PostgreSQL", "Azure"],
     },
     {
@@ -272,8 +267,7 @@ export const experiences: ExperiencesConfig = {
       company: "Nokia",
       companylogo: require("../assets/img/nokia.png"),
       date: "May 2023 - August 2023",
-      description:
-        "Contributed to telecommunications software, focusing on 5G network infrastructure and optimization.",
+      description: "Developed MACSec test automation for Ethernet encryption on the MACSec testing team.",
       technologies: ["Python", "C++", "TCL", "Linux"],
     },
   ],
