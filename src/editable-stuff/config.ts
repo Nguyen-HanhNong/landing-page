@@ -150,7 +150,7 @@ export const stats: StatsConfig = {
       icon: "Briefcase",
     },
     {
-      value: "6",
+      value: "6+",
       label: "Companies",
       icon: "Building2",
     },
@@ -169,7 +169,7 @@ export const about: AboutConfig = {
   imageLink: require("../editable-stuff/headshot.jpg"),
   imageSize: 375,
   message:
-    "Hi! My name is Nguyen-Hanh Nong and I'm a 4th-year Computer Science student at Carleton University, with an estimated graduation date of April 2026. I'm most passionate about giving back to the community, and my goal is to pursue this passion within software engineering and machine learning. In my free time, I like to create music and contribute to open-source projects.",
+    "Hi! My name is Nguyen-Hanh Nong and currently a Software Engineer at Bloomberg. I'm most passionate about giving back to the community, and my goal is to pursue this passion within software engineering and machine learning. In my free time, I like to create music and contribute to open-source projects.",
   resume: require("../editable-stuff/sample-resume.pdf"),
 };
 
@@ -222,6 +222,14 @@ export const experiences: ExperiencesConfig = {
   show: true,
   heading: "Experience",
   data: [
+   {
+      role: "Software Engineer",
+      company: "Bloomberg",
+      companylogo: require("../assets/img/bloomberg.jpg"),
+      date: "August 2026 - Present",
+      description: "",
+      technologies: ["Python", "C++"],
+    },
     {
       role: "Software Engineer Intern",
       company: "Tesla",
@@ -286,22 +294,6 @@ export const featuredProjects: FeaturedProjectsConfig = {
       github: "https://github.com/CarletonComputerScienceSociety/questions",
       featured: true,
     },
-    {
-      name: "Counter-Strike Hacker Analyzer",
-      description:
-        "A CLI tool that analyzes Counter-Strike 2 match data to identify hackers and provide insights into their performance.",
-      technologies: ["Python", "Go", "NumPy", "Pandas", "Scikit-learn", "Tensorflow", "SQLite"],
-      github: "https://github.com/Nguyen-HanhNong/cs2-golang-hacker-analyzer",
-      featured: true,
-    },
-    {
-      name: "RL Satellite Routing Simulator",
-      description:
-        "A simulator that models the routing of satellites in the RL Satellite Network using reinforcement learning.",
-      technologies: ["PyQt5", "Python", "NumPy", "Pandas", "Scikit-learn", "Tensorflow", "SQLite"],
-      github: "https://github.com/Nguyen-HanhNong/Reinforcement-Learning-Satellite-Routing-Simulator",
-      featured: true,
-    },
   ],
 };
 
@@ -343,6 +335,6 @@ export const getInTouch: GetInTouchConfig = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for Software Engineering (< 2 YOE) opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+    "I'm open for Software Engineering (< 2 YOE) opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
   email: "nongnguyenhanh@gmail.com",
 };
