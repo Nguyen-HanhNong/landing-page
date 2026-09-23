@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.871ef474.css",
-    "main.js": "/static/js/main.6a6be3b6.js",
-    "static/js/488.c5f26738.chunk.js": "/static/js/488.c5f26738.chunk.js",
+    "main.css": "/static/css/main.7d06fbfb.css",
+    "main.js": "/static/js/main.47ef6bf6.js",
+    "static/js/488.58c46c39.chunk.js": "/static/js/488.58c46c39.chunk.js",
     "static/media/sample-resume.pdf": "/static/media/sample-resume.8d78c54df6c53476507b.pdf",
     "static/media/headshot.jpg": "/static/media/headshot.6f1503cf50d01afe8ef9.jpg",
     "static/media/nokia.png": "/static/media/nokia.16d54a819b55b98f3847.png",
     "static/media/government.png": "/static/media/government.d5ce726c3ca657e565ea.png",
     "static/media/aws.png": "/static/media/aws.7322b6e4bff581d35533.png",
     "static/media/qualcomm.png": "/static/media/qualcomm.1d908dc3974e41d8c267.png",
+    "static/media/bloomberg.jpg": "/static/media/bloomberg.fefc0c4b49055c33bda4.jpg",
     "index.html": "/index.html",
-    "main.871ef474.css.map": "/static/css/main.871ef474.css.map",
-    "main.6a6be3b6.js.map": "/static/js/main.6a6be3b6.js.map",
-    "488.c5f26738.chunk.js.map": "/static/js/488.c5f26738.chunk.js.map"
+    "main.7d06fbfb.css.map": "/static/css/main.7d06fbfb.css.map",
+    "main.47ef6bf6.js.map": "/static/js/main.47ef6bf6.js.map",
+    "488.58c46c39.chunk.js.map": "/static/js/488.58c46c39.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.871ef474.css",
-    "static/js/main.6a6be3b6.js"
+    "static/css/main.7d06fbfb.css",
+    "static/js/main.47ef6bf6.js"
   ]
 }
