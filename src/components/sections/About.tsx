@@ -64,7 +64,7 @@ export function About() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
                   <Calendar className="w-4 h-4 text-blue-500" />
-                  <span className="text-sm">Graduating April 2026</span>
+                  <span className="text-sm">April 2026</span>
                 </div>
               </div>
 
